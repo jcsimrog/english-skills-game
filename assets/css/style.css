@@ -1,0 +1,54 @@
+/* Estilos generales */
+/* Mobile First */
+@media (max-width: 600px) {
+  .video-container iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .word-bank {
+    flex-direction: column;
+    align-items: center;
+  }
+  .word {
+    width: 80%;
+  }
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f9ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #ff6b6b;
+  }
+  
+  .stories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .story-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+  }
+  
+  .story-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .story-card img {
+    width: 100%;
+    border-radius: 8px;
+  }

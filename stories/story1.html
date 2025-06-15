@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Very Hungry Caterpillar | AMCO Game</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/story.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="back-button">← Volver</a>
+    <h1>🐛 The Very Hungry Caterpillar</h1>
+  </header>
+
+  <main>
+    <!-- Video del cuento -->
+    <div class="video-container">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/75NQK-Sm1YY?si=J7WEXiTbC1b8eZQa" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Ejercicios -->
+    <div class="exercise">
+      <h2>📝 Completa las oraciones</h2>
+      
+      <!-- Oración 1 -->
+      <div class="sentence" data-answer="an apple">
+        <p>On Monday, the caterpillar ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
+      </div>
+
+      <!-- Oración 2 -->
+      <div class="sentence" data-answer="two pears">
+        <p>On Tuesday, it ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
+      </div>
+
+      <!-- Oración 3 -->
+      <div class="sentence" data-answer="three plums">
+        <p>On Wednesday, it ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
+      </div>
+
+      <!-- Oración 4 -->
+      <div class="sentence" data-answer="four strawberries">
+        <p>On Thursday, it ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
+      </div>
+
+      <!-- Oración 5 -->
+      <div class="sentence" data-answer="five oranges">
+        <p>On Friday, it ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
+      </div>
+
+      <!-- Banco de palabras -->
+      <div class="word-bank">
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="an apple">an apple</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="two pears">two pears</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="three plums">three plums</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="four strawberries">four strawberries</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="five oranges">five oranges</div>
+      </div>
+
+      <!-- Contadores y Botones -->
+      <div class="results">
+        <p>✅ <span id="correct-count">0</span> correctas | ❌ <span id="wrong-count">0</span> incorrectas</p>
+        <button id="check-answers">Validar Respuestas</button>
+        <button id="reset-exercise">Reiniciar Ejercicio</button>
+      </div>
+      <p id="feedback"></p>
+    </div>
+  </main>
+
+  <script src="../assets/js/story1.js"></script>
+</body>
+</html>

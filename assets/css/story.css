@@ -1,0 +1,93 @@
+/* Estilos para el cuento */
+.video-container {
+  margin: 20px auto;
+  max-width: 560px;
+}
+
+.exercise {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sentence {
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 100px;
+  height: 30px;
+  border-bottom: 2px dashed #ff6b6b;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.word-bank {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.word {
+  background: #ffd166;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: grab;
+  user-select: none;
+}
+
+#check-answers {
+  background: #06d6a0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#check-answers:hover {
+  background: #05b589;
+}
+
+#feedback {
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 24px;
+}
+
+/* Contadores y Botones */
+.results {
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+#correct-count {
+  color: #06d6a0;
+}
+
+#wrong-count {
+  color: #ef476f;
+}
+
+#reset-exercise {
+  background: #ffd166;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#reset-exercise:hover {
+  background: #ffc233;
+}
