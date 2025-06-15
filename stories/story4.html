@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Three Little Pigs | English Skills Game</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/story.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="back-button">← Back to home</a>
+    <h1>🐷 The Three Little Pigs</h1>
+  </header>
+
+  <main>
+    <!-- Video del cuento -->
+    <div class="video-container">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/MfjR9KxSMeo?si=cX9uHmOdTWOVY3gV" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Ejercicio: Seleccionar imagen correcta -->
+    <div class="exercise">
+      <h2>📝 Choose the correct picture.</h2>
+      
+      <!-- Pregunta 1 -->
+      <div class="image-question" data-answer="brick-house">
+        <p>1. Which house did NOT get blown down by the wolf?</p>
+        <div class="image-options">
+          <div class="img-option" data-value="straw-house">
+            <img src="../assets/images/three-little-pigs/straw-hose.png" alt="Straw house">
+            <p>Straw house</p>
+          </div>
+          <div class="img-option" data-value="wood-house">
+            <img src="../assets/images/three-little-pigs/wood-house.png" alt="Wood house">
+            <p>Wood house</p>
+          </div>
+          <div class="img-option" data-value="brick-house">
+            <img src="../assets/images/three-little-pigs/brick-house.png" alt="Brick house">
+            <p>Brick house</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="image-question" data-answer="wolf">
+        <p>2. Who tried to blow down the pigs' houses?</p>
+        <div class="image-options">
+          <div class="img-option" data-value="pig">
+            <img src="../assets/images/three-little-pigs/pig.png" alt="Pig">
+            <p>Pig</p>
+          </div>
+          <div class="img-option" data-value="wolf">
+            <img src="../assets/images/three-little-pigs/wolf.png" alt="Wolf">
+            <p>Wolf</p>
+          </div>
+          <div class="img-option" data-value="bear">
+            <img src="../assets/images/three-little-pigs/bear.png" alt="Bear">
+            <p>Bear</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="image-question" data-answer="chimney">
+        <p>3. How did the wolf try to enter the brick house?</p>
+        <div class="image-options">
+          <div class="img-option" data-value="window">
+            <img src="../assets/images/three-little-pigs/window.png" alt="Window">
+            <p>Window</p>
+          </div>
+          <div class="img-option" data-value="door">
+            <img src="../assets/images/three-little-pigs/door.png" alt="Door">
+            <p>Door</p>
+          </div>
+          <div class="img-option" data-value="chimney">
+            <img src="../assets/images/three-little-pigs/chimney.png" alt="Chimney">
+            <p>Chimney</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contadores y Botones -->
+      <div class="results">
+        <p>✅ <span id="correct-count">0</span> correct | ❌ <span id="wrong-count">0</span> incorrect</p>
+        <button id="check-answers">Check Answers</button>
+        <button id="reset-exercise">Restart Exercise</button>
+      </div>
+      <p id="feedback"></p>
+    </div>
+  </main>
+
+  <script src="../assets/js/select-image.js"></script>
+</body>
+</html>

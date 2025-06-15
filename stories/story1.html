@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Very Hungry Caterpillar | AMCO Game</title>
+  <title>The Very Hungry Caterpillar | English Skills Game</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/story.css">
 </head>
 <body>
   <header>
-    <a href="../index.html" class="back-button">← Volver</a>
+    <a href="../index.html" class="back-button">← Back to home</a>
     <h1>🐛 The Very Hungry Caterpillar</h1>
   </header>
 
@@ -29,8 +29,18 @@
 
     <!-- Ejercicios -->
     <div class="exercise">
-      <h2>📝 Completa las oraciones</h2>
+      <h2>📝 Complete the sentences. Use the Word Bank.</h2>
       
+      <!-- Banco de palabras PRIMERO -->
+      <div class="word-bank">
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="three plums">three plums</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="five oranges">five oranges</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="an apple">an apple</div>        
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="four strawberries">four strawberries</div>
+        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="two pears">two pears</div>
+      </div>
+
+      <!-- Frases a completar DESPUÉS -->
       <!-- Oración 1 -->
       <div class="sentence" data-answer="an apple">
         <p>On Monday, the caterpillar ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
@@ -56,25 +66,16 @@
         <p>On Friday, it ate <span class="blank" ondragover="allowDrop(event)" ondrop="dropWord(event)"></span>.</p>
       </div>
 
-      <!-- Banco de palabras -->
-      <div class="word-bank">
-        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="an apple">an apple</div>
-        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="two pears">two pears</div>
-        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="three plums">three plums</div>
-        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="four strawberries">four strawberries</div>
-        <div class="word" draggable="true" ondragstart="dragWord(event)" data-word="five oranges">five oranges</div>
-      </div>
-
       <!-- Contadores y Botones -->
       <div class="results">
-        <p>✅ <span id="correct-count">0</span> correctas | ❌ <span id="wrong-count">0</span> incorrectas</p>
-        <button id="check-answers">Validar Respuestas</button>
-        <button id="reset-exercise">Reiniciar Ejercicio</button>
+        <p>✅ <span id="correct-count">0</span> correct | ❌ <span id="wrong-count">0</span> incorrect</p>
+        <button id="check-answers">Check Answers</button>
+        <button id="reset-exercise">Restart</button>
       </div>
       <p id="feedback"></p>
     </div>
   </main>
 
-  <script src="../assets/js/story1.js"></script>
+  <script src="../assets/js/drag-and-drop.js"></script>
 </body>
 </html>

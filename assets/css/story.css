@@ -91,3 +91,123 @@
 #reset-exercise:hover {
   background: #ffc233;
 }
+
+.word-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+}
+
+.word {
+  padding: 8px 12px;
+  background-color: #e1f5fe;
+  border-radius: 4px;
+  cursor: grab;
+  transition: all 0.2s;
+}
+
+.word:hover {
+  background-color: #b3e5fc;
+}
+
+.word:active {
+  cursor: grabbing;
+}
+
+.sentence {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 100px;
+  border-bottom: 2px dashed #333;
+  padding: 0 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Estilos para el juego True/False */
+.tf-question {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tf-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tf-btn {
+  padding: 8px 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.tf-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.tf-btn.selected {
+  border-color: #4CAF50;
+  background-color: #e8f5e9;
+}
+
+/* Estilo para respuestas correctas/incorrectas */
+.tf-btn.correct {
+  background-color: #a8f0c1;
+}
+
+.tf-btn.incorrect {
+  background-color: #ffb3ba;
+}
+
+/* Estilos para el juego de imágenes */
+.image-question {
+  margin: 25px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.image-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.img-option {
+  width: 120px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.img-option:hover {
+  transform: scale(1.05);
+}
+
+.img-option.selected {
+  border: 3px solid #4CAF50 !important;
+}
+
+.img-option img {
+  width: 100%;
+  border-radius: 5px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}

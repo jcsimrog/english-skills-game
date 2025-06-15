@@ -23,6 +23,22 @@ function dropWord(event) {
   
   blank.textContent = word;
   blank.setAttribute("data-filled", word);
+  
+  // Deshabilitar la palabra usada en el banco
+  disableUsedWord(word);
+}
+
+// Deshabilitar palabra usada
+function disableUsedWord(word) {
+  const wordElements = document.querySelectorAll(".word");
+  wordElements.forEach(element => {
+    if (element.getAttribute("data-word") === word) {
+      element.style.opacity = "0.5";
+      element.style.backgroundColor = "#cccccc";
+      element.setAttribute("draggable", "false");
+      element.style.cursor = "not-allowed";
+    }
+  });
 }
 
 // Validar respuestas
@@ -65,6 +81,14 @@ document.getElementById("reset-exercise").addEventListener("click", function() {
     blank.textContent = "";
     blank.removeAttribute("data-filled");
     blank.style.backgroundColor = "transparent";
+  });
+  
+  // Reactivar todas las palabras del banco
+  document.querySelectorAll(".word").forEach(word => {
+    word.style.opacity = "1";
+    word.style.backgroundColor = "";
+    word.setAttribute("draggable", "true");
+    word.style.cursor = "grab";
   });
   
   correctAnswers = 0;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Red Riding Hood | English Skills Game</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/story.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="back-button">← Back to home</a>
+    <h1>🧺 Little Red Riding Hood</h1>
+  </header>
+
+  <main>
+    <!-- Video del cuento (nuevo enlace funcional) -->
+    <div class="video-container">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/LDMWJCrDVMI?si=JKkWztjOp4ErT6VE" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Ejercicios True/False -->
+    <div class="exercise">
+      <h2>📝 Answer True or False. Fill in the correct box.</h2>
+      
+      <!-- Pregunta 1 -->
+      <div class="tf-question" data-answer="true">
+        <p>Little Red Riding Hood took food to her grandmother.</p>
+        <div class="tf-options">
+          <button class="tf-btn" data-value="true">✅ True</button>
+          <button class="tf-btn" data-value="false">❌ False</button>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="tf-question" data-answer="false">
+        <p>The wolf was friendly and helped Little Red Riding Hood.</p>
+        <div class="tf-options">
+          <button class="tf-btn" data-value="true">✅ True</button>
+          <button class="tf-btn" data-value="false">❌ False</button>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="tf-question" data-answer="true">
+        <p>The wolf dressed as Grandma to trick Little Red Riding Hood.</p>
+        <div class="tf-options">
+          <button class="tf-btn" data-value="true">✅ True</button>
+          <button class="tf-btn" data-value="false">❌ False</button>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="tf-question" data-answer="false">
+        <p>Little Red Riding Hood didn’t notice the wolf’s big teeth.</p>
+        <div class="tf-options">
+          <button class="tf-btn" data-value="true">✅ True</button>
+          <button class="tf-btn" data-value="false">❌ False</button>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="tf-question" data-answer="true">
+        <p>A woodcutter saved Little Red Riding Hood and her grandma.</p>
+        <div class="tf-options">
+          <button class="tf-btn" data-value="true">✅ True</button>
+          <button class="tf-btn" data-value="false">❌ False</button>
+        </div>
+      </div>
+
+      <!-- Contadores y Botones -->
+      <div class="results">
+        <p>✅ <span id="correct-count">0</span> correct | ❌ <span id="wrong-count">0</span> incorrect</p>
+        <button id="check-answers">Check Answers</button>
+        <button id="reset-exercise">Restart Exercise</button>
+      </div>
+      <p id="feedback"></p>
+    </div>
+  </main>
+
+  <script src="../assets/js/true-or-false.js"></script>
+</body>
+</html>
