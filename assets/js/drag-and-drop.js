@@ -52,25 +52,28 @@ document.getElementById("check-answers").addEventListener("click", function() {
     const userAnswer = blank.getAttribute("data-filled");
     
     if (userAnswer === correctAnswer) {
-      blank.style.backgroundColor = "#a8f0c1"; // Verde claro
+      blank.style.backgroundColor = "#a8f0c1";
       correctAnswers++;
     } else {
-      blank.style.backgroundColor = "#ffb3ba"; // Rojo claro
+      blank.style.backgroundColor = "#ffb3ba";
       wrongAnswers++;
     }
   });
   
-  // Actualizar contadores
   document.getElementById("correct-count").textContent = correctAnswers;
   document.getElementById("wrong-count").textContent = wrongAnswers;
   
-  // Mostrar feedback
   const feedback = document.getElementById("feedback");
   if (correctAnswers === 5) {
-    feedback.textContent = "¡Perfecto! 🎉 Todas las respuestas son correctas.";
+    feedback.textContent = "🎉 Excellent! All answers are correct!";
     feedback.style.color = "#06d6a0";
+    
+    // Efectos de celebración
+    playCelebrationSound();
+    showConfetti();
+    setTimeout(showStars, 1000);
   } else {
-    feedback.textContent = `Sigue practicando. Tienes ${correctAnswers} de 5 correctas.`;
+    feedback.textContent = `Keep practicing! You got ${correctAnswers} out of 5 correct.`;
     feedback.style.color = "#ef476f";
   }
 });
@@ -83,7 +86,6 @@ document.getElementById("reset-exercise").addEventListener("click", function() {
     blank.style.backgroundColor = "transparent";
   });
   
-  // Reactivar todas las palabras del banco
   document.querySelectorAll(".word").forEach(word => {
     word.style.opacity = "1";
     word.style.backgroundColor = "";

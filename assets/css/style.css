@@ -1,54 +1,137 @@
 /* Estilos generales */
-/* Mobile First */
-@media (max-width: 600px) {
-  .video-container iframe {
-    width: 100%;
-    height: 200px;
-  }
-  .word-bank {
-    flex-direction: column;
-    align-items: center;
-  }
-  .word {
-    width: 80%;
-  }
-}
-
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f0f9ff;
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    background-color: #aae0f0;
     margin: 0;
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1 {
+    line-height: 1.5;
+}
+
+header h1 {
     color: #ff6b6b;
-  }
-  
-  .stories-list {
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    color: #2b6db9;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.stories-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .story-card {
-    background: white;
+    margin-bottom: 40px;
+}
+
+.story-card {
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
     padding: 15px;
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #333;
-    transition: transform 0.3s;
-  }
-  
-  .story-card:hover {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.story-card:hover {
     transform: scale(1.05);
-  }
-  
-  .story-card img {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.story-card img {
     width: 100%;
     border-radius: 8px;
-  }
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.story-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.student-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.school-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+/* Mobile First */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .story-card {
+        width: 150px;
+    }
+    
+    .school-header {
+        flex-direction: column;
+    }
+    
+    .school-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -58,6 +58,11 @@ document.getElementById("check-answers").addEventListener("click", function() {
   if (correctAnswers === 5) {
     feedback.textContent = "🎉 Excellent! All answers are correct!";
     feedback.style.color = "#06d6a0";
+
+    // Efectos de celebración
+    playCelebrationSound();
+    showConfetti();
+    setTimeout(showStars, 1000);
   } else {
     feedback.textContent = `Keep practicing! You got ${correctAnswers} out of 5 correct.`;
     feedback.style.color = "#ef476f";
